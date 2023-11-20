@@ -1,0 +1,11 @@
+C:\Users\tunay\source\repos\mobilsinav2\mobilsinav2\bin\Debug\mobilsinav2.exe.config
+C:\Users\tunay\source\repos\mobilsinav2\mobilsinav2\bin\Debug\mobilsinav2.exe
+C:\Users\tunay\source\repos\mobilsinav2\mobilsinav2\bin\Debug\mobilsinav2.pdb
+C:\Users\tunay\source\repos\mobilsinav2\mobilsinav2\obj\Debug\mobilsinav2.csproj.AssemblyReference.cache
+C:\Users\tunay\source\repos\mobilsinav2\mobilsinav2\obj\Debug\mobilsinav2.Form1.resources
+C:\Users\tunay\source\repos\mobilsinav2\mobilsinav2\obj\Debug\mobilsinav2.Properties.Resources.resources
+C:\Users\tunay\source\repos\mobilsinav2\mobilsinav2\obj\Debug\mobilsinav2.csproj.GenerateResource.cache
+C:\Users\tunay\source\repos\mobilsinav2\mobilsinav2\obj\Debug\mobilsinav2.csproj.CoreCompileInputs.cache
+C:\Users\tunay\source\repos\mobilsinav2\mobilsinav2\obj\Debug\mobilsinav2.exe
+C:\Users\tunay\source\repos\mobilsinav2\mobilsinav2\obj\Debug\mobilsinav2.pdb
+C:\Users\tunay\source\repos\mobilsinav2\mobilsinav2\obj\Debug\mobilsinav2.Odeme.resources
