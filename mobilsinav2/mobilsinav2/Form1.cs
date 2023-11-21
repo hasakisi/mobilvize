@@ -381,6 +381,10 @@ namespace mobilsinav2
 
         }
 
+
+        
+            
+           
         private static int genelDegisken;
 
             int hamburger = 30;
@@ -402,16 +406,13 @@ namespace mobilsinav2
             int masa3 = 0;
             int masa4 = 0;
             int masa5 = 0;
-            string siparismasa1 = null;
-            string siparismasa2 = null;
-            string siparismasa3 = null;
-            string siparismasa4 = null;
-            string siparismasa5 = null;
-
-
-        private void button1_Click(object sender, EventArgs e)
+            
+            
+            
+        public static void button1_Click(object sender, EventArgs e)
         {
             
+
             int hamburger1_adet = Convert.ToInt32(textBox1.Text);
             int pizza1_adet = Convert.ToInt32(textBox2.Text);
             int doner1_adet = Convert.ToInt32(textBox3.Text);
@@ -426,10 +427,9 @@ namespace mobilsinav2
             int donut1_adet = Convert.ToInt32(textBox10.Text);
             int baklava1_adet = Convert.ToInt32(textBox11.Text);
             int magnolia1_adet = Convert.ToInt32(textBox12.Text);
+            string siparismasa1 = "";
 
-
-
-
+            
             if (c1.Checked)
             {
                 masa1 += hamburger * hamburger1_adet;
@@ -481,7 +481,41 @@ namespace mobilsinav2
                 masa1 += magnolia * magnolia1_adet;
             }
 
+
+
+            siparismasa1 = "selamlar";
+           
+
+            if (OnayPenceresiGoster("Ödeme yapmak istediğinize emin misiniz?"))
+            {
+
+            }
+
+
+        }
+
+        private bool OnayPenceresiGoster(string mesaj)
+        {
+            string onayMesaji = "Onaylanmadı"; 
+
+            DialogResult result = MessageBox.Show(mesaj, "Ödeme Onayı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+
+            if (result == DialogResult.Yes)
+            {
+                onayMesaji = "Onaylandı";
+                Odeme odeme = new Odeme();
+                odeme.Show();
+
+
+            }
+            else
+            {
+                
+            }
             
+            MessageBox.Show(onayMesaji, "İşlem Tamamlandı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return result == DialogResult.Yes;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -557,6 +591,10 @@ namespace mobilsinav2
             {
                 masa2 += magnolia * magnolia2_adet;
             }
+            if (OnayPenceresiGoster("Ödeme yapmak istediğinize emin misiniz?"))
+            {
+
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -630,6 +668,10 @@ namespace mobilsinav2
             if (checkBox9.Checked)
             {
                 masa3 += magnolia * magnolia3_adet;
+            }
+            if (OnayPenceresiGoster("Ödeme yapmak istediğinize emin misiniz?"))
+            {
+
             }
         }
             
@@ -706,6 +748,10 @@ namespace mobilsinav2
             {
                 masa4 += magnolia * magnolia4_adet;
             }
+            if (OnayPenceresiGoster("Ödeme yapmak istediğinize emin misiniz?"))
+            {
+
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -781,14 +827,16 @@ namespace mobilsinav2
             {
                 masa5 += magnolia * magnolia5_adet;
             }
+            if (OnayPenceresiGoster("Ödeme yapmak istediğinize emin misiniz?"))
+            {
+
+            }
         }
         private void button2_Click(object sender, EventArgs e)
         {
 
 
 
-            Odeme odeme = new Odeme();
-            odeme.Show();
         }
         
     }

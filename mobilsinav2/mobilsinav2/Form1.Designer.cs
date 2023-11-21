@@ -52,7 +52,6 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -173,7 +172,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -409,16 +408,6 @@
             this.textBox12.Text = "0";
             this.textBox12.Click += new System.EventHandler(this.textBox12_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(1283, 138);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 41);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Ödeme yapabilir";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button1);
@@ -485,7 +474,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
@@ -1691,15 +1680,15 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // button2
             // 
-            this.button6.Location = new System.Drawing.Point(39, 700);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(137, 32);
-            this.button6.TabIndex = 33;
-            this.button6.Text = "Ödeme";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button2.Location = new System.Drawing.Point(39, 700);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(137, 32);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Ödeme";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 
@@ -1711,7 +1700,6 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
@@ -1754,7 +1742,6 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -1872,7 +1859,7 @@
         private System.Windows.Forms.TextBox textBox59;
         private System.Windows.Forms.TextBox textBox60;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;

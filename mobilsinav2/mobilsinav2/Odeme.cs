@@ -23,9 +23,11 @@ namespace mobilsinav2
             
         }
 
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Add("Siparişi bütün ayrıntılarıyla görüntüleme");
+            listBox1.Items.Add(Form1.siparismasa1);
         }
+        
     }
 }
