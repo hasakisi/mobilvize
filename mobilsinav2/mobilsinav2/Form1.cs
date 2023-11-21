@@ -382,11 +382,10 @@ namespace mobilsinav2
         }
 
 
-        
+       
             
            
-        private static int genelDegisken;
-
+        public static int genelDegisken;
             int hamburger = 30;
             int pizza = 25;
             int doner = 20;
@@ -401,15 +400,20 @@ namespace mobilsinav2
             int donut = 7;
             int baklava = 20;
             int magnolia = 15;
-            int masa1 = 0;
-            int masa2 = 0;
-            int masa3 = 0;
-            int masa4 = 0;
-            int masa5 = 0;
+
+        public static int toplam = 0;
+        public static int masa1 = 0;
+        public static int masa2 = 0;
+        public static int masa3 = 0;
+        public static int masa4 = 0;
+        public static int masa5 = 0;
+
+
+        
             
             
             
-        public static void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             
 
@@ -427,64 +431,113 @@ namespace mobilsinav2
             int donut1_adet = Convert.ToInt32(textBox10.Text);
             int baklava1_adet = Convert.ToInt32(textBox11.Text);
             int magnolia1_adet = Convert.ToInt32(textBox12.Text);
-            string siparismasa1 = "";
+            
 
             
             if (c1.Checked)
             {
                 masa1 += hamburger * hamburger1_adet;
+                listBox1.Items.Add($"{hamburger1_adet} adet Hamburger : {hamburger1_adet*hamburger}TL'dir");
+
+
+
+
             }
             if (c2.Checked)
             {
                 masa1 += pizza * pizza1_adet;
+                listBox1.Items.Add($"{pizza1_adet} adet Pizza : {pizza1_adet * pizza}TL'dir");
+
+
             }
             if (c3.Checked)
             {
                 masa1 += doner * doner1_adet;
+               
+                listBox1.Items.Add($"{doner1_adet} adet Et Döner : {doner1_adet * doner}TL'dir");
+
+
             }
             if (c4.Checked)
             {
                 masa1 += pilav * tavuk1_adet;
+               
+                listBox1.Items.Add($"{tavuk1_adet} adet Tavuk Pilav : {tavuk1_adet * pilav}TL'dir");
+
+
             }
             if (c5.Checked)
             {
                 masa1 += kola * kola1_adet;
+                
+                listBox1.Items.Add($"{kola1_adet} adet Kola : {kola1_adet * kola}TL'dir");
+
+
             }
 
             if (c6.Checked)
             {
                 masa1 += ayran * ayran1_adet;
+               
+                listBox1.Items.Add($"{ayran1_adet} adet Ayran : {ayran1_adet * ayran}TL'dir");
+
+
             }
             if (c7.Checked)
             {
                 masa1 += soda * soda1_adet;
+               
+                listBox1.Items.Add($"{soda1_adet} adet Soda : {soda1_adet * soda}TL'dir");
+
+
             }
             if (c8.Checked)
             {
                 masa1 += su * su1_adet;
+               
+                listBox1.Items.Add($"{su1_adet} adet Su : {su1_adet * su}TL'dir");
+
+
             }
 
             if (c9.Checked)
             {
                 masa1 += supangle * supangle1_adet;
+                
+                listBox1.Items.Add($"{supangle1_adet} adet Supangle : {supangle1_adet * supangle}TL'dir");
+
+
             }
             if (c10.Checked)
             {
                 masa1 += donut * donut1_adet;
+                
+                listBox1.Items.Add($"{donut1_adet} adet Donut : {donut1_adet * donut}TL'dir");
+
+
             }
             if (c11.Checked)
             {
                 masa1 += baklava * baklava1_adet;
+                
+                listBox1.Items.Add($"{baklava1_adet} adet Baklava : {baklava1_adet * baklava}TL'dir");
+
+
             }
             if (c12.Checked)
             {
                 masa1 += magnolia * magnolia1_adet;
+                
+                listBox1.Items.Add($"{magnolia1_adet} adet Magnolia : {magnolia1_adet * magnolia}TL'dir");
+
+
             }
 
 
 
-            siparismasa1 = "selamlar";
-           
+            toplam += masa1;
+
+
 
             if (OnayPenceresiGoster("Ödeme yapmak istediğinize emin misiniz?"))
             {
@@ -504,10 +557,8 @@ namespace mobilsinav2
             if (result == DialogResult.Yes)
             {
                 onayMesaji = "Onaylandı";
-                Odeme odeme = new Odeme();
-                odeme.Show();
-
-
+                Odeme form2 = new Odeme(listBox1.Items.Cast<string>().ToList());
+                form2.Show();
             }
             else
             {
@@ -544,57 +595,86 @@ namespace mobilsinav2
             if (c13.Checked)
             {
                 masa2 += hamburger * hamburger2_adet;
+               
+                listBox1.Items.Add($"{hamburger2_adet} adet Hamburger : {hamburger2_adet * hamburger}TL'dir");
             }
             if (c14.Checked)
             {
                 masa2 += pizza * pizza2_adet;
+
+                listBox1.Items.Add($"{pizza2_adet} adet Pizza : {pizza2_adet * pizza}TL'dir");
+
             }
             if (c15.Checked)
             {
                 masa2 += doner * doner2_adet;
+
+                listBox1.Items.Add($"{doner2_adet} adet Et Döner : {doner2_adet * doner}TL'dir");
             }
             if (c16.Checked)
             {
                 masa2 += pilav * tavuk2_adet;
+
+                listBox1.Items.Add($"{tavuk2_adet} adet Tavuk Pilav : {tavuk2_adet * pilav}TL'dir");
             }
             if (c17.Checked)
             {
                 masa2 += kola * kola2_adet;
+
+                listBox1.Items.Add($"{kola2_adet} adet Kola : {kola2_adet * kola}TL'dir");
             }
 
             if (c18.Checked)
             {
                 masa2 += ayran * ayran2_adet;
+
+                listBox1.Items.Add($"{ayran2_adet} adet Ayran : {ayran2_adet * ayran}TL'dir");
             }
             if (c19.Checked)
             {
                 masa2 += soda * soda2_adet;
+
+                listBox1.Items.Add($"{soda2_adet} adet Soda : {soda2_adet * soda}TL'dir");
+
             }
             if (c20.Checked)
             {
                 masa2 += su * su2_adet;
+
+                listBox1.Items.Add($"{su2_adet} adet Su : {su2_adet * su}TL'dir");
+
             }
 
             if (c21.Checked)
             {
                 masa2 += supangle * supangle2_adet;
+
+                listBox1.Items.Add($"{supangle2_adet} adet Supangle : {supangle2_adet * supangle}TL'dir");
             }
             if (c22.Checked)
             {
                 masa2 += donut * donut2_adet;
+
+                listBox1.Items.Add($"{donut2_adet} adet Donut : {donut2_adet * donut}TL'dir");
             }
             if (c23.Checked)
             {
                 masa2 += baklava * baklava2_adet;
+
+                listBox1.Items.Add($"{baklava2_adet} adet Baklava : {baklava2_adet * baklava}TL'dir");
             }
             if (c24.Checked)
             {
                 masa2 += magnolia * magnolia2_adet;
+
+                listBox1.Items.Add($"{magnolia2_adet} adet Magnolia : {magnolia2_adet * magnolia}TL'dir");
             }
             if (OnayPenceresiGoster("Ödeme yapmak istediğinize emin misiniz?"))
             {
 
             }
+            toplam += masa2;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -622,59 +702,77 @@ namespace mobilsinav2
             if (checkBox1.Checked)
             {
                 masa3 += hamburger * hamburger3_adet;
+               
+                listBox1.Items.Add($"{hamburger3_adet} adet Hamburger : {hamburger3_adet * hamburger}TL'dir");
             }
             if (checkBox2.Checked)
             {
                 masa3 += pizza * pizza3_adet;
+                listBox1.Items.Add($"{pizza3_adet} adet Pizza : {pizza3_adet * pizza}TL'dir");
             }
             if (checkBox3.Checked)
             {
                 masa3 += doner * doner3_adet;
+                listBox1.Items.Add($"{doner3_adet} adet Et Döner : {doner3_adet * doner}TL'dir");
+
             }
             if (checkBox4.Checked)
             {
                 masa3 += pilav * tavuk3_adet;
+                listBox1.Items.Add($"{tavuk3_adet} adet Tavuk Pilav : {tavuk3_adet * pilav}TL'dir");
             }
             if (checkBox8.Checked)
             {
                 masa3 += kola * kola3_adet;
+                listBox1.Items.Add($"{kola3_adet} adet Kola : {kola3_adet * kola}TL'dir");
             }
 
             if (checkBox7.Checked)
             {
                 masa3 += ayran * ayran3_adet;
+                listBox1.Items.Add($"{ayran3_adet} adet Ayran : {ayran3_adet * ayran}TL'dir");
             }
             if (checkBox6.Checked)
             {
                 masa3 += soda * soda3_adet;
+                listBox1.Items.Add($"{soda3_adet} adet Soda : {soda3_adet * soda}TL'dir");
             }
             if (checkBox5.Checked)
             {
                 masa3 += su * su3_adet;
+                listBox1.Items.Add($"{su3_adet} adet Su : {su3_adet * su}TL'dir");
             }
 
             if (checkBox12.Checked)
             {
                 masa3 += supangle * supangle3_adet;
+                listBox1.Items.Add($"{supangle3_adet} adet Supangle : {supangle3_adet * supangle}TL'dir");
             }
             if (checkBox11.Checked)
             {
                 masa3 += donut * donut3_adet;
+                listBox1.Items.Add($"{donut3_adet} adet Donut : {donut3_adet * donut}TL'dir");
             }
             if (checkBox10.Checked)
             {
                 masa3 += baklava * baklava3_adet;
+                listBox1.Items.Add($"{baklava3_adet} adet Baklava : {baklava3_adet * baklava}TL'dir");
             }
             if (checkBox9.Checked)
             {
                 masa3 += magnolia * magnolia3_adet;
+                listBox1.Items.Add($"{magnolia3_adet} adet Magnolia : {magnolia3_adet * magnolia}TL'dir");
             }
+
+
             if (OnayPenceresiGoster("Ödeme yapmak istediğinize emin misiniz?"))
             {
 
             }
+            toplam += masa3;
+
         }
-            
+
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -701,57 +799,73 @@ namespace mobilsinav2
             if (checkBox13.Checked)
             {
                 masa4 += hamburger * hamburger4_adet;
+                listBox1.Items.Add($"{hamburger4_adet} adet Hamburger : {hamburger4_adet * hamburger}TL'dir");
             }
             if (checkBox14.Checked)
             {
                 masa4 += pizza * pizza4_adet;
+                listBox1.Items.Add($"{pizza4_adet} adet Pizza : {pizza4_adet * pizza}TL'dir");
             }
             if (checkBox15.Checked)
             {
                 masa4 += doner * doner4_adet;
+                listBox1.Items.Add($"{doner4_adet} adet Et Döner : {doner4_adet * doner}TL'dir");
             }
             if (checkBox16.Checked)
             {
                 masa4 += pilav * tavuk4_adet;
+                listBox1.Items.Add($"{tavuk4_adet} adet Tavuk Pilav : {tavuk4_adet * pilav}TL'dir");
             }
             if (checkBox20.Checked)
             {
                 masa4 += kola * kola4_adet;
+                listBox1.Items.Add($"{kola4_adet} adet Kola : {kola4_adet * kola}TL'dir");
+
             }
 
             if (checkBox19.Checked)
             {
                 masa4 += ayran * ayran4_adet;
+                listBox1.Items.Add($"{ayran4_adet} adet Ayran : {ayran4_adet * ayran}TL'dir");
             }
             if (checkBox18.Checked)
             {
                 masa4 += soda * soda4_adet;
+                listBox1.Items.Add($"{soda4_adet} adet Soda : {soda4_adet * soda}TL'dir");
             }
             if (checkBox17.Checked)
             {
                 masa4 += su * su4_adet;
+                listBox1.Items.Add($"{su4_adet} adet Su : {su4_adet * su}TL'dir");
             }
 
             if (checkBox24.Checked)
             {
                 masa4 += supangle * supangle4_adet;
+                listBox1.Items.Add($"{supangle4_adet} adet Supangle : {supangle4_adet * supangle}TL'dir");
             }
             if (checkBox23.Checked)
             {
                 masa4 += donut * donut4_adet;
+                listBox1.Items.Add($"{donut4_adet} adet Donut : {donut4_adet * donut}TL'dir");
             }
             if (checkBox22.Checked)
             {
                 masa4 += baklava * baklava4_adet;
+                listBox1.Items.Add($"{baklava4_adet} adet Baklava : {baklava4_adet * baklava}TL'dir");
             }
             if (checkBox21.Checked)
             {
                 masa4 += magnolia * magnolia4_adet;
+                listBox1.Items.Add($"{magnolia4_adet} adet Magnolia : {magnolia4_adet * magnolia}TL'dir");
             }
             if (OnayPenceresiGoster("Ödeme yapmak istediğinize emin misiniz?"))
             {
 
             }
+
+            toplam += masa4;
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -780,58 +894,76 @@ namespace mobilsinav2
             if (checkBox28.Checked)
             {
                 masa5 += hamburger * hamburger5_adet;
+                listBox1.Items.Add($"{hamburger5_adet} adet Hamburger : {hamburger5_adet * hamburger}TL'dir");
             }
             if (checkBox29.Checked)
             {
                 masa5 += pizza * pizza5_adet;
+                listBox1.Items.Add($"{pizza5_adet} adet Pizza : {pizza5_adet * pizza}TL'dir");
             }
             if (checkBox30.Checked)
             {
                 masa5 += doner * doner5_adet;
+                listBox1.Items.Add($"{doner5_adet} adet Et Döner : {doner5_adet * doner}TL'dir");
             }
             if (checkBox31.Checked)
             {
                 masa5 += pilav * tavuk5_adet;
+                listBox1.Items.Add($"{tavuk5_adet} adet Tavuk Pilav : {tavuk5_adet * pilav}TL'dir");
             }
             if (checkBox33.Checked)
             {
                 masa5 += kola * kola5_adet;
+                listBox1.Items.Add($"{kola5_adet} adet Kola : {kola5_adet * kola}TL'dir");
             }
 
             if (checkBox32.Checked)
             {
                 masa5 += ayran * ayran5_adet;
+                listBox1.Items.Add($"{ayran5_adet} adet Ayran : {ayran5_adet * ayran}TL'dir");
             }
             if (checkBox26.Checked)
             {
                 masa5 += soda * soda5_adet;
+                listBox1.Items.Add($"{soda5_adet} adet Soda : {soda5_adet * soda}TL'dir");
             }
             if (checkBox27.Checked)
             {
                 masa5 += su * su5_adet;
+                listBox1.Items.Add($"{su5_adet} adet Su : {su5_adet * su}TL'dir");
             }
 
             if (checkBox25.Checked)
             {
                 masa5 += supangle * supangle5_adet;
+                listBox1.Items.Add($"{supangle5_adet} adet Supangle : {supangle5_adet * supangle}TL'dir");
             }
             if (checkBox36.Checked)
             {
                 masa5 += donut * donut5_adet;
+                listBox1.Items.Add($"{donut5_adet} adet Donut : {donut5_adet * donut}TL'dir");
             }
             if (checkBox35.Checked)
             {
                 masa5 += baklava * baklava5_adet;
+                listBox1.Items.Add($"{baklava5_adet} adet Baklava : {baklava5_adet * baklava}TL'dir");
             }
             if (checkBox34.Checked)
             {
                 masa5 += magnolia * magnolia5_adet;
+                listBox1.Items.Add($"{magnolia5_adet} adet Magnolia : {magnolia5_adet * magnolia}TL'dir");
             }
             if (OnayPenceresiGoster("Ödeme yapmak istediğinize emin misiniz?"))
             {
 
             }
+            toplam += masa5;
+
         }
+
+
+
+
         private void button2_Click(object sender, EventArgs e)
         {
 
